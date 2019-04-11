@@ -1,0 +1,17 @@
+<% include partial/header %>
+<% yes.forEach(function(blogs){ %>
+  <div class="container">
+           <div class="card flex-md-row mb-4 box-shadow h-md-250">
+             <img class="card-img-left flex-auto d-none d-md-block" width="200px" height="150px" src="<%= blogs.image%>">
+             <div class="card-body d-flex flex-column align-items-start">
+               <h3 class="mb-0">
+                 <a class="text-dark" href="<%= blogs._id%>"><%= blogs.title%></a>
+               </h3>
+               <div class="mb-1 text-muted"><%= blogs.created.toDateString() %></div>
+               <p class="card-text mb-auto"><%= blogs.body.substring(0,100) %></p>
+               <!-- <a href="#">Continue reading</a> -->
+             </div>
+           </div>
+         </div>
+<% }) %>
+<% include partial/footer %>

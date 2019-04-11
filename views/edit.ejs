@@ -1,0 +1,12 @@
+<% include partial/header %>
+<form class="form col-8 m-auto" action="../<%= yess._id %>?_method=PUT" method="post">
+      <h1 class="h3 mb-3 font-weight-normal" style="text-align:center">Edit <%= yess.title%></h1>
+      <!-- <label for="title">Title</label> -->
+      <input type="text" id="title" class="form-control mb-1" name="a[title]" value="<%= yess.title%>" required>
+      <!-- <label for="image">Image</label> -->
+      <input type="text" id="image" class="form-control mb-1" name="a[image]" value="<%= yess.image%>" required>
+      <!-- <label for="Desc">Desciption</label> -->
+      <textarea type="text" id="Desc" class="form-control mb-1" name="a[body]"><%= yess.body%></textarea>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Post</button>
+</form>
+<% include partial/footer %>

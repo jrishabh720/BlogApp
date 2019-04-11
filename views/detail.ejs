@@ -1,0 +1,20 @@
+<% include partial/header %>
+<div class="container">
+         <div class="card">
+             <div class="card-body">
+              <h1><%= no.title%></h1>
+             <div class="mb-1 text-muted"><%= no.created.toDateString() %></div>
+             <img class="card-img mb-5" width="100%" src="<%= no.image%>">
+             <span class="text-justify" ><%= no.body.substring()%></span>
+           </div>
+           <div class="row">
+           <a href="../blogs/edit/<%= no.id%>" class="btn btn-primary mb-3" style=" margin-left:36px">
+             Edit
+           </a>
+           <form action="../blogs/delete/<%= no.id%>?_method=DELETE" method="post" class="ml-auto mr-5">
+             <button class="btn btn-danger" name="button">Delete</button>
+           </form>
+           </div>
+         </div>
+       </div>
+<% include partial/footer %>
